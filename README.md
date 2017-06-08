@@ -1,0 +1,3 @@
+# MovieTicketCollector
+2017年应用集成课程作业
+一个简单的电影票对比网页，使用SpringMVC框架
