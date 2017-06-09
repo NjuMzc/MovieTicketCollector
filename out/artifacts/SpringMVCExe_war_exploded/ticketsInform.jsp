@@ -44,8 +44,31 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-</head>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <style type="text/css">object,embed{-webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;-ms-animation-duration:.001s;-ms-animation-name:playerInserted;-o-animation-duration:.001s;-o-animation-name:playerInserted;animation-duration:.001s;animation-name:playerInserted;}@-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}@-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}@-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}@keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style>
+</head>
 <body>
 <header>
     <!--Top-->
@@ -81,27 +104,7 @@
         </div>
     </nav>
 
-    <div class="header-slide">
-        <div id="owl-demo" class="owl-carousel">
-                <%
-                    for(int i=1;i<10;i++){
-                        %>
-                <div class="item">
-                    <div class="zoom-container">
-                        <div class="zoom-caption">
-                            <a href="movieInform.jsp">
-                                <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                            </a>
-                            <p>Video's Name</p>
-                        </div>
-                        <img src="http://p1.meituan.net/movie/0879eb8e787dd4cede7ee206d43b95b6564255.png@464w_644h_1e_1c" />
-                    </div>
-                </div>
-                <%
-                    }
-                %>
-        </div>
-    </div>
+
 </header>
 <!-- Header -->
 
@@ -110,48 +113,145 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="container">
-                <%
-                    int counter = 0;
-                    for(int i=0;i<30;i++){
-                        counter++;
-                        if(counter%4 == 1){
-                            if(counter!=1){%>
-                                </div>
-                                    </div>
-                        <%
-                            }
-                            %>
-                    <div class="row">
-                        <div class="featured">
-                <%
-                        }
-%>
-                            <div class="main-vid">
-                                <div class="col-md-3">
-                                    <div class="zoom-container">
-                                        <div class="zoom-caption">
-                                            <span>Video's Tag</span>
-                                            <a href="movieInform.jsp">
-                                                <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                                            </a>
-                                            <p><%=counter%></p>
-                                        </div>
-                                        <img src="http://p1.meituan.net/movie/0879eb8e787dd4cede7ee206d43b95b6564255.png@464w_644h_1e_1c" />
-                                    </div>
-                                </div>
-                            </div>
-                            <%
-
-                    }
-
-                    %>
-                        </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="http://p1.meituan.net/movie/0879eb8e787dd4cede7ee206d43b95b6564255.png@464w_644h_1e_1c" />
                     </div>
-                            <%
-                %>
+                    <div class="col-md-9">
+                        <h4>李雷和韩梅梅</h4><br>
+                        <p style="font-size:120%">导演：</p>
+                        <p style="font-size:120%">主演：</p>
+                        <p style="font-size:120%">影片时长：</p>
+                        <p style="font-size:120%">上映时间：</p>
+                        <p style="font-size:120%">剧情简介：
+                            故事发生在《普罗米修斯》10年后，一群新的宇航员乘坐着“契约号”飞船前往遥远的星系寻找殖民地，他们来到一处看似天堂般的星球，实则是黑暗、危险的地狱，在那里他们见到了“普罗米修斯”号唯一的幸存者生化人大卫（迈克尔·法斯宾德 饰），一场毁灭性的巨大灾难即将到来。
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="container">
+                <div class="row">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label>&nbsp;&nbsp;&nbsp;&nbsp;选择观影日期</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="date" class="form-control" id="date" placeholder="2017/06/06">
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">查询</button>
+                    </form>
+                </div>
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#activity" data-toggle="tab" aria-expanded="true">网站1号</a></li>
+                        <li class=""><a href="#timeline" data-toggle="tab" aria-expanded="false">网站2号</a></li>
+                        <li class=""><a href="#settings" data-toggle="tab" aria-expanded="false">网站3号</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="activity">
+                                <div class="box">
+                                    <div class="box-body">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                            <tr>
+                                                <th>放映时间</th>
+                                                <th>结束时间</th>
+                                                <th>放映厅</th>
+                                                <th>票价</th>
+                                                <th>优惠信息</th>
+                                            </tr>
+
+                                            <%
+                                                for(int i=0;i<5;i++){
+                                            %>
+                                            <tr>
+                                                <td>7:30</td>
+                                                <td>8:30</td>
+                                                <td>1号厅</td>
+                                                <td>20元</td>
+                                                <td>满20减3</td>
+                                            </tr>
+                                            <%
+                                                }
+                                            %>
+                                            </tbody></table>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="timeline">
+                            <div class="box">
+                                <div class="box-body">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                        <tr>
+                                            <th>放映时间</th>
+                                            <th>结束时间</th>
+                                            <th>放映厅</th>
+                                            <th>票价</th>
+                                            <th>优惠信息</th>
+                                        </tr>
+
+                                        <%
+                                            for(int i=0;i<5;i++){
+                                        %>
+                                        <tr>
+                                            <td>19:30</td>
+                                            <td>20:30</td>
+                                            <td>2号厅</td>
+                                            <td>20元</td>
+                                            <td>满20减3</td>
+                                        </tr>
+                                        <%
+                                            }
+                                        %>
+                                        </tbody></table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.tab-pane -->
+
+                        <div class="tab-pane" id="settings">
+                            <div class="box">
+                                <div class="box-body">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                        <tr>
+                                            <th>放映时间</th>
+                                            <th>结束时间</th>
+                                            <th>放映厅</th>
+                                            <th>票价</th>
+                                            <th>优惠信息</th>
+                                        </tr>
+
+                                        <%
+                                            for(int i=0;i<5;i++){
+                                        %>
+                                        <tr>
+                                            <td>1:30</td>
+                                            <td>2:30</td>
+                                            <td>3号厅</td>
+                                            <td>40元</td>
+                                            <td>满20减3</td>
+                                        </tr>
+                                        <%
+                                            }
+                                        %>
+                                        </tbody></table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.tab-pane -->
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 </div>
 
@@ -243,6 +343,7 @@
 <!-- JS -->
 <script src="owl-carousel/owl.carousel.js"></script>
 <script>
+    document.getElementById('date').valueAsDate = new Date();
     $(document).ready(function() {
         $("#owl-demo").owlCarousel({
             autoPlay: 3000,
@@ -256,4 +357,5 @@
 
 </body>
 </html>
+
 

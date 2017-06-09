@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("*")
 public class HelloMVCController {
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String helloMVC(){
         System.out.println("Receive Request!");
         return "home";
