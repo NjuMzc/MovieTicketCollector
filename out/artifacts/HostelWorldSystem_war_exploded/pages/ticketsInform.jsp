@@ -116,6 +116,9 @@
     Film film = (Film) request.getAttribute("Film");
     Cinema cinema = (Cinema) request.getAttribute("Cinema");
     ArrayList<Tickets> tickets = (ArrayList<Tickets>) request.getAttribute("TicketList");
+
+    session.setAttribute("Film",film);
+    session.setAttribute("Cinema",cinema);
 %>
 
 <div id="page-content" class="single-page">

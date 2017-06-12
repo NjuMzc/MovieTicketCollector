@@ -64,11 +64,10 @@ public class MainController {
 
         main.java.model.Date date=ticketsDao.getDateByInfo(calendar.get(Calendar.YEAR),(calendar.get(Calendar.MONTH)+1),calendar.get(Calendar.DAY_OF_MONTH));
         List<Tickets> tickets = ticketsDao.get(cinema.getId(),date.getId(),film.getId());
+
         request.setAttribute("TicketList",tickets);
 
-        for(Tickets t:tickets){
-            System.out.println(t.getApp_type()+" "+t.getStart_time());
-        }
+
 
         return "/pages/ticketsInform";
     }
@@ -87,10 +86,12 @@ public class MainController {
 
         main.java.model.Date dateO=ticketsDao.getDateByInfo(Integer.valueOf(date.substring(0,4)),Integer.valueOf(date.substring(5,7)),Integer.valueOf(date.substring(8,10)));
 
-        System.out.println(dateO.getYear()+" "+dateO.getMonth()+" "+dateO.getDay());
+        System.out.println(dateO.getId()+" "+dateO.getYear()+" "+dateO.getMonth()+" "+dateO.getDay());
 
         List<Tickets> tickets = ticketsDao.get(cinema.getId(),dateO.getId(),film.getId());
         request.setAttribute("TicketList",tickets);
+
+        System.out.println(cinema.getId()+" "+dateO.getId()+" "+film.getId());
 
         for(Tickets t:tickets){
             System.out.println(t.getApp_type()+" "+t.getStart_time());
